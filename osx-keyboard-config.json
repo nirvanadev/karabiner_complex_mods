@@ -386,6 +386,33 @@
 						}
 					],
 					"type": "basic"
+				},
+				{
+					"description": "t = new tab (command + t)",
+					"type": "basic",
+					"from": {
+						"key_code": "t",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"right_command",
+								"right_control",
+								"right_shift",
+								"right_option"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "t",
+							"modifiers": [
+								"left_command"
+							]
+						}
+					],
+					"type": "basic"
 				}
 			]
 		}
