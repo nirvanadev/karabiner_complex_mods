@@ -182,6 +182,33 @@
 						}
 					],
 					"type": "basic"
+				},
+				{
+					"description": "w = close window",
+					"type": "basic",
+					"from": {
+						"key_code": "w",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"right_command",
+								"right_control",
+								"right_shift",
+								"right_option"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "w",
+							"modifiers": [
+								"left_command"
+							]
+						}
+					],
+					"type": "basic"
 				}
 			]
 		}
