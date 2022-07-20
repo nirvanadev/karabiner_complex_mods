@@ -494,6 +494,78 @@
 						}
 					],
 					"type": "basic"
+				},
+				{
+					"description": "4 = activate webull",
+					"type": "basic",
+					"from": {
+						"key_code": "4",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"right_command",
+								"right_control",
+								"right_shift",
+								"right_option"
+							]
+						}
+					},
+					"to": [
+						{
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_webull.scpt"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"description": "5 = activate todoist",
+					"type": "basic",
+					"from": {
+						"key_code": "5",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"right_command",
+								"right_control",
+								"right_shift",
+								"right_option"
+							]
+						}
+					},
+					"to": [
+						{
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_todoist.scpt"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"description": "6 = activate notability",
+					"type": "basic",
+					"from": {
+						"key_code": "6",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"right_command",
+								"right_control",
+								"right_shift",
+								"right_option"
+							]
+						}
+					},
+					"to": [
+						{
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_notability.scpt"
+						}
+					],
+					"type": "basic"
 				}
 			]
 		}
