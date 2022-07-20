@@ -566,6 +566,54 @@
 						}
 					],
 					"type": "basic"
+				},
+				{
+					"description": "semicolon = home",
+					"type": "basic",
+					"from": {
+						"key_code": "semicolon",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"right_command",
+								"right_control",
+								"right_shift",
+								"right_option"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "home"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"description": "quote = end",
+					"type": "basic",
+					"from": {
+						"key_code": "quote",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"right_command",
+								"right_control",
+								"right_shift",
+								"right_option"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "end"
+						}
+					],
+					"type": "basic"
 				}
 			]
 		}
