@@ -1,4 +1,4 @@
-tell application "iTerm"
+tell application "Visual Studio Code"
 	activate
 end tell
 
