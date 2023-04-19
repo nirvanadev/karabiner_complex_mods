@@ -557,7 +557,7 @@
                     },
 					"to": [
 						{
-							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_terminal.scpt"
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_kitty.scpt"
 						}
 					],
 					"type": "basic"
@@ -587,7 +587,7 @@
 					"type": "basic"
 				},
 				{
-					"description": "f2 = Edge",
+					"description": "f2 = edge",
 					"type": "basic",
 					"from": {
 						"key_code": "f2"
@@ -698,14 +698,14 @@
 					"type": "basic"
 				},
 				{
-					"description": "f5 = todoist",
+					"description": "f5 = Slack",
 					"type": "basic",
 					"from": {
 						"key_code": "f5"
 					},
 					"to": [
 						{
-							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_todoist.scpt"
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_slack.scpt"
 						}
 					],
 					"type": "basic"
@@ -735,14 +735,14 @@
 					"type": "basic"
 				},
 				{
-					"description": "f6 = notability",
+					"description": "f6 = Teams",
 					"type": "basic",
 					"from": {
 						"key_code": "f6"
 					},
 					"to": [
 						{
-							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_notability.scpt"
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_teams.scpt"
 						}
 					],
 					"type": "basic"
@@ -772,14 +772,14 @@
 					"type": "basic"
 				},
 				{
-					"description": "f7 = adobexd",
+					"description": "f7 = Todoist",
 					"type": "basic",
 					"from": {
 						"key_code": "f7"
 					},
 					"to": [
 						{
-							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_adobexd.scpt"
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_todoist.scpt"
 						}
 					],
 					"type": "basic"
@@ -999,6 +999,49 @@
 					"to": [
 						{
 							"key_code": "f12"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"description": "volume knob ccw = ctrl+shift+tab",
+					"type": "basic",
+					"from": {
+                        "consumer_key_code": "volume_decrement",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "tab",
+							"modifiers": [
+								"left_control",
+								"left_shift"
+							]
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"description": "volume knob cw = ctrl+tab",
+					"type": "basic",
+					"from": {
+                        "consumer_key_code": "volume_increment",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "tab",
+							"modifiers": [
+								"left_control"
+							]
 						}
 					],
 					"type": "basic"
