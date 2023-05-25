@@ -502,30 +502,6 @@
 					"type": "basic"
 				},
 				{
-					"description": "return or enter = vimium tab search in MS Edge",
-					"type": "basic",
-					"from": {
-						"key_code": "return_or_enter",
-						"modifiers": {
-							"optional": [
-								"caps_lock"
-							],
-							"mandatory": [
-								"right_command",
-								"right_control",
-								"right_shift",
-								"right_option"
-							]
-						}
-					},
-					"to": [
-						{
-							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/tab_search_edge.scpt"
-						}
-					],
-					"type": "basic"
-				},
-				{
 					"description": "q = Lock Macbook",
 					"type": "basic",
 					"from": {
