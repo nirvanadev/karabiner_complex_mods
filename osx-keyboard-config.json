@@ -87,7 +87,7 @@
 					]
 				},
 				{
-					"description": "backslash = cycle apps",
+					"description": "backslash = iTerm",
 					"type": "basic",
 					"from": {
 						"key_code": "backslash",
@@ -105,10 +105,7 @@
 					},
 					"to": [
 						{
-							"key_code": "tab",
-							"modifiers": [
-								"left_command"
-							]
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_terminal.scpt"
 						}
 					],
 					"type": "basic"
@@ -426,7 +423,7 @@
 					"type": "basic"
 				},
 				{
-					"description": "semicolon = home",
+					"description": "semicolon = home key",
 					"type": "basic",
 					"from": {
 						"key_code": "semicolon",
@@ -450,7 +447,7 @@
 					"type": "basic"
 				},
 				{
-					"description": "quote = end",
+					"description": "quote = end key",
 					"type": "basic",
 					"from": {
 						"key_code": "quote",
@@ -469,6 +466,24 @@
 					"to": [
 						{
 							"key_code": "end"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"description": "end = clear notifications",
+					"type": "basic",
+					"from": {
+						"key_code": "end",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							]
+						}
+					},
+					"to": [
+						{
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/clear_notifications.js"
 						}
 					],
 					"type": "basic"
@@ -533,7 +548,7 @@
                     },
 					"to": [
 						{
-							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_terminal.scpt"
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_phpstorm.scpt"
 						}
 					],
 					"type": "basic"
@@ -980,6 +995,19 @@
 					"type": "basic"
 				},
 				{
+					"description": "f13 = hold ctrl+tab",
+					"type": "basic",
+					"from": {
+						"key_code": "f13"
+					},
+					"to": [
+						{
+						   "shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/phpstorm_ctrl_plus_tab.scpt"
+						}
+					],
+					"type": "basic"
+				},
+				{
 					"description": "Hyper + delete = clear notifications",
 					"type": "basic",
 					"from": {
@@ -999,6 +1027,24 @@
 					"to": [
 						{
 							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/clear_notifications.js"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"description": "del key on MX Mechanical",
+					"type": "basic",
+					"from": {
+						"key_code": "delete_forward",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							]
+                        }
+					},
+					"to": [
+						{
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/mac_lock.scpt"
 						}
 					],
 					"type": "basic"
