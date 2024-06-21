@@ -8,36 +8,8 @@
 			"manipulators": [
 				{
 					"description": "capslock = esc(click) | hyper(hold)",
-					"type": "basic",
 					"from": {
 						"key_code": "caps_lock",
-						"modifiers": {
-							"optional": [
-								"any"
-							]
-						}
-					},
-					"to": [
-						{
-							"key_code": "right_shift",
-							"modifiers": [
-								"right_command",
-								"right_control",
-								"right_option"
-							]
-						}
-					],
-					"to_if_alone": [
-						{
-							"key_code": "escape"
-						}
-					]
-				},
-				{
-					"description": "right command also is hyper key",
-					"type": "basic",
-					"from": {
-						"key_code": "right_command",
 						"modifiers": {
 							"optional": [
 								"any"
@@ -88,7 +60,6 @@
 				},
 				{
 					"description": "backslash = iTerm",
-					"type": "basic",
 					"from": {
 						"key_code": "backslash",
 						"modifiers": {
@@ -112,7 +83,6 @@
 				},
 				{
 					"description": "w = close window",
-					"type": "basic",
 					"from": {
 						"key_code": "w",
 						"modifiers": {
@@ -139,7 +109,6 @@
 				},
 				{
 					"description": "c = copy",
-					"type": "basic",
 					"from": {
 						"key_code": "c",
 						"modifiers": {
@@ -166,7 +135,6 @@
 				},
 				{
 					"description": "v = paste",
-					"type": "basic",
 					"from": {
 						"key_code": "v",
 						"modifiers": {
@@ -193,7 +161,6 @@
 				},
 				{
 					"description": "x = cut",
-					"type": "basic",
 					"from": {
 						"key_code": "x",
 						"modifiers": {
@@ -220,7 +187,6 @@
 				},
 				{
 					"description": "s = save",
-					"type": "basic",
 					"from": {
 						"key_code": "s",
 						"modifiers": {
@@ -247,7 +213,6 @@
 				},
 				{
 					"description": "h = left",
-					"type": "basic",
 					"from": {
 						"key_code": "h",
 						"modifiers": {
@@ -271,7 +236,6 @@
 				},
 				{
 					"description": "j = down",
-					"type": "basic",
 					"from": {
 						"key_code": "j",
 						"modifiers": {
@@ -295,7 +259,6 @@
 				},
 				{
 					"description": "k = up",
-					"type": "basic",
 					"from": {
 						"key_code": "k",
 						"modifiers": {
@@ -319,7 +282,6 @@
 				},
 				{
 					"description": "l = right",
-					"type": "basic",
 					"from": {
 						"key_code": "l",
 						"modifiers": {
@@ -343,7 +305,6 @@
 				},
 				{
 					"description": "t = new tab (command + t)",
-					"type": "basic",
 					"from": {
 						"key_code": "t",
 						"modifiers": {
@@ -370,7 +331,6 @@
 				},
 				{
 					"description": "u = vim page up (control + u)",
-					"type": "basic",
 					"from": {
 						"key_code": "u",
 						"modifiers": {
@@ -397,7 +357,6 @@
 				},
 				{
 					"description": "d = vim page down (control + d)",
-					"type": "basic",
 					"from": {
 						"key_code": "d",
 						"modifiers": {
@@ -424,7 +383,6 @@
 				},
 				{
 					"description": "semicolon = home key",
-					"type": "basic",
 					"from": {
 						"key_code": "semicolon",
 						"modifiers": {
@@ -448,7 +406,6 @@
 				},
 				{
 					"description": "quote = end key",
-					"type": "basic",
 					"from": {
 						"key_code": "quote",
 						"modifiers": {
@@ -471,26 +428,7 @@
 					"type": "basic"
 				},
 				{
-					"description": "end = clear notifications",
-					"type": "basic",
-					"from": {
-						"key_code": "end",
-						"modifiers": {
-							"optional": [
-								"caps_lock"
-							]
-						}
-					},
-					"to": [
-						{
-							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/clear_notifications.js"
-						}
-					],
-					"type": "basic"
-				},
-				{
 					"description": "spacebar = alfred",
-					"type": "basic",
 					"from": {
 						"key_code": "spacebar",
 						"modifiers": {
@@ -537,25 +475,49 @@
 						{
 							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/mac_lock.scpt"
 						}
-					],
-					"type": "basic"
+					]
+				},
+				{
+					"description": "e = emoji",
+					"type": "basic",
+					"from": {
+						"key_code": "e",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"right_command",
+								"right_control",
+								"right_shift",
+								"right_option"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "spacebar",
+							"modifiers": [
+								"left_command",
+								"left_control"
+							]
+						}
+					]
 				},
 				{
 					"description": "f1 = Terminal",
-					"type": "basic",
 					"from": {
 						"key_code": "f1"
                     },
 					"to": [
 						{
-							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_phpstorm.scpt"
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_terminal.scpt"
 						}
 					],
 					"type": "basic"
 				},
 				{
 					"description": "Hyper + f1 = f1",
-					"type": "basic",
 					"from": {
 						"key_code": "f1",
 						"modifiers": {
@@ -579,7 +541,6 @@
 				},
 				{
 					"description": "f2 = vivaldi",
-					"type": "basic",
 					"from": {
 						"key_code": "f2"
 					},
@@ -592,7 +553,6 @@
 				},
 				{
 					"description": "Hyper + f2 = f2",
-					"type": "basic",
 					"from": {
 						"key_code": "f2",
 						"modifiers": {
@@ -616,7 +576,6 @@
 				},
 				{
 					"description": "f3 = Outlook",
-					"type": "basic",
 					"from": {
 						"key_code": "f3"
 					},
@@ -629,7 +588,6 @@
 				},
 				{
 					"description": "Hyper + f3 = f3",
-					"type": "basic",
 					"from": {
 						"key_code": "f3",
 						"modifiers": {
@@ -653,7 +611,6 @@
 				},
 				{
 					"description": "f4 = Finder",
-					"type": "basic",
 					"from": {
 						"key_code": "f4"
 					},
@@ -666,7 +623,6 @@
 				},
 				{
 					"description": "Hyper + f4 = f4",
-					"type": "basic",
 					"from": {
 						"key_code": "f4",
 						"modifiers": {
@@ -690,7 +646,6 @@
 				},
 				{
 					"description": "f5 = Slack",
-					"type": "basic",
 					"from": {
 						"key_code": "f5"
 					},
@@ -703,7 +658,6 @@
 				},
 				{
 					"description": "Hyper + f5 = f5",
-					"type": "basic",
 					"from": {
 						"key_code": "f5",
 						"modifiers": {
@@ -727,7 +681,6 @@
 				},
 				{
 					"description": "f6 = Teams",
-					"type": "basic",
 					"from": {
 						"key_code": "f6"
 					},
@@ -740,7 +693,6 @@
 				},
 				{
 					"description": "Hyper + f6 = f6",
-					"type": "basic",
 					"from": {
 						"key_code": "f6",
 						"modifiers": {
@@ -764,20 +716,18 @@
 				},
 				{
 					"description": "f7 = Todoist",
-					"type": "basic",
 					"from": {
 						"key_code": "f7"
 					},
 					"to": [
 						{
-							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_todoist.scpt"
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_phpstorm.scpt"
 						}
 					],
 					"type": "basic"
 				},
 				{
 					"description": "Hyper + f7 = f7",
-					"type": "basic",
 					"from": {
 						"key_code": "f7",
 						"modifiers": {
@@ -801,7 +751,6 @@
 				},
 				{
 					"description": "f8 = Davinci Resolve",
-					"type": "basic",
 					"from": {
 						"key_code": "f8"
 					},
@@ -814,7 +763,6 @@
 				},
 				{
 					"description": "Hyper + f8 = f8",
-					"type": "basic",
 					"from": {
 						"key_code": "f8",
 						"modifiers": {
@@ -837,8 +785,7 @@
 					"type": "basic"
 				},
 				{
-					"description": "f9 = Ableton",
-					"type": "basic",
+					"description": "f9 = Reaper",
 					"from": {
 						"key_code": "f9"
 					},
@@ -851,7 +798,6 @@
 				},
 				{
 					"description": "Hyper + f9 = f9",
-					"type": "basic",
 					"from": {
 						"key_code": "f9",
 						"modifiers": {
@@ -875,7 +821,6 @@
 				},
 				{
 					"description": "f10 = command + w",
-					"type": "basic",
 					"from": {
 						"key_code": "f10"
 					},
@@ -891,7 +836,6 @@
 				},
 				{
 					"description": "Hyper + f10 = f10",
-					"type": "basic",
 					"from": {
 						"key_code": "f10",
 						"modifiers": {
@@ -915,7 +859,6 @@
 				},
 				{
 					"description": "f11 = ctrl+shift+tab",
-					"type": "basic",
 					"from": {
 						"key_code": "f11"
 					},
@@ -932,7 +875,6 @@
 				},
 				{
 					"description": "Hyper + f11 = f11",
-					"type": "basic",
 					"from": {
 						"key_code": "f11",
 						"modifiers": {
@@ -956,7 +898,6 @@
 				},
 				{
 					"description": "f12 = ctrl+tab",
-					"type": "basic",
 					"from": {
 						"key_code": "f12"
 					},
@@ -972,7 +913,6 @@
 				},
 				{
 					"description": "Hyper + f12 = f12",
-					"type": "basic",
 					"from": {
 						"key_code": "f12",
 						"modifiers": {
@@ -995,21 +935,130 @@
 					"type": "basic"
 				},
 				{
-					"description": "f13 = hold ctrl+tab",
-					"type": "basic",
+					"description": "f13",
 					"from": {
 						"key_code": "f13"
 					},
 					"to": [
 						{
-						   "shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/phpstorm_ctrl_plus_tab.scpt"
+						   "shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_pycharm.scpt"
 						}
 					],
 					"type": "basic"
 				},
 				{
-					"description": "Hyper + delete = clear notifications",
+					"description": "f13",
+					"from": {
+						"key_code": "f13",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"left_shift"
+							]
+						}
+					},
+					"to": [
+						{
+						   "consumer_key_code": "display_brightness_decrement"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"description": "f14",
+					"from": {
+						"key_code": "f14"
+					},
+					"to": [
+						{
+						   "shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_adobexd.scpt"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"description": "f14",
+					"from": {
+						"key_code": "f14",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"left_shift"
+							]
+						}
+					},
+					"to": [
+						{
+						   "consumer_key_code": "display_brightness_increment"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"description": "f15",
 					"type": "basic",
+					"from": {
+						"key_code": "f15"
+					},
+					"to": [
+						{
+							"shell_command": "open -a 'Turn On The Sound System.app'"
+						}
+					]
+				},
+				{
+					"description": "f15",
+					"type": "basic",
+					"from": {
+						"key_code": "f15",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							],
+							"mandatory": [
+								"left_shift"
+							]
+						}
+					},
+					"to": [
+						{
+							"shell_command": "open -a 'Turn Off The Sound System.app'"
+						}
+					]
+				},
+				{
+					"description": "f16",
+					"type": "basic",
+					"from": {
+						"key_code": "f16"
+					},
+					"to": [
+						{
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/focus_todoist.scpt"
+						}
+					]
+				},
+				{
+					"description": "f22 = cmd + t",
+					"type": "basic",
+					"from": {
+						"key_code": "f22"
+					},
+					"to": [
+						{
+							"key_code": "t",
+							"modifiers": [
+								"left_command"
+							]
+						}
+					]
+				},
+				{
+					"description": "Hyper + delete = clear notifications",
 					"from": {
 						"key_code": "delete_or_backspace",
 						"modifiers": {
@@ -1044,10 +1093,32 @@
 					},
 					"to": [
 						{
-							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/mac_lock.scpt"
+							"key_code": "return_or_enter",
+							"modifiers": [
+								"right_shift",
+								"right_command",
+								"right_control",
+								"right_option"
+							]
 						}
-					],
-					"type": "basic"
+					]
+				},
+				{
+					"description": "knob press on keychron q1 pro",
+					"type": "basic",
+					"from": {
+						"key_code": "f21",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							]
+						}
+					},
+					"to": [
+						{
+							"shell_command": "osascript /Users/k33f/.config/karabiner/assets/complex_modifications/karabiner_complex_mods/knob_press.scpt"
+						}
+					]
 				}
 			]
 		}

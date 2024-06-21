@@ -1,3 +1,3 @@
-tell application "Ableton Live 11 Standard"
+tell application "Ableton Live 12 Suite"
 	activate
 end tell
