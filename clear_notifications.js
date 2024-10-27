@@ -1,5 +1,4 @@
 function run(input, parameters) {
-
   const appNames = [];
   const skipAppNames = [];
   const verbose = true;
@@ -31,7 +30,10 @@ function run(input, parameters) {
   };
 
   const systemVersion = () => {
-    return Application("Finder").version().split(".").map(val => parseInt(val));
+    return Application("Finder")
+      .version()
+      .split(".")
+      .map((val) => parseInt(val));
   };
 
   const systemVersionGreaterThanOrEqualTo = (vers) => {
@@ -60,7 +62,7 @@ function run(input, parameters) {
   const logError = (message, ...optionalParams) => {
     if (isError(message)) {
       let err = message;
-      message = `${err}${err.stack ? (" " + err.stack) : ""}`;
+      message = `${err}${err.stack ? " " + err.stack : ""}`;
     }
     log(`ERROR ${message}`, optionalParams);
   };
@@ -178,7 +180,9 @@ function run(input, parameters) {
       let firstElem = group.uiElements[0];
       return matchesAppName(firstElem.role(), firstElem.value());
     } catch (err) {
-      logErrorVerbose(`Caught error while checking window, window is probably closed: ${err}`);
+      logErrorVerbose(
+        `Caught error while checking window, window is probably closed: ${err}`,
+      );
       logErrorVerbose(err);
     }
     return false;
@@ -192,7 +196,9 @@ function run(input, parameters) {
         }
       }
     } catch (err) {
-      logErrorVerbose(`(group_${closedCount}) Caught error while searching for close action, window is probably closed: ${err}`);
+      logErrorVerbose(
+        `(group_${closedCount}) Caught error while searching for close action, window is probably closed: ${err}`,
+      );
       logErrorVerbose(err);
       return null;
     }
@@ -226,7 +232,9 @@ function run(input, parameters) {
         return closeAction;
       }
     } catch (err) {
-      logErrorVerbose(`(group_${closedCount}) Caught error while searching for close action, window is probably closed: ${err}`);
+      logErrorVerbose(
+        `(group_${closedCount}) Caught error while searching for close action, window is probably closed: ${err}`,
+      );
       logErrorVerbose(err);
       return null;
     }
@@ -245,7 +253,9 @@ function run(input, parameters) {
               closeAction.perform();
               return [true, 1];
             } catch (err) {
-              logErrorVerbose(`(group_${closedCount}) Caught error while performing close action, window is probably closed: ${err}`);
+              logErrorVerbose(
+                `(group_${closedCount}) Caught error while performing close action, window is probably closed: ${err}`,
+              );
               logErrorVerbose(err);
             }
           }
@@ -260,26 +270,35 @@ function run(input, parameters) {
   };
 
   try {
-    let groupsCount = getNotificationCenterGroups(true).filter(group => notificationGroupMatches(group)).length;
+    let groupsCount = getNotificationCenterGroups(true).filter((group) =>
+      notificationGroupMatches(group),
+    ).length;
 
     if (groupsCount > 0) {
-      logVerbose(`Closing ${groupsCount}${appNameForLog} notification group${(groupsCount > 1 ? "s" : "")}`);
+      logVerbose(
+        `Closing ${groupsCount}${appNameForLog} notification group${groupsCount > 1 ? "s" : ""}`,
+      );
 
       let startTime = new Date().getTime();
       let closedCount = 0;
       let maybeMore = true;
       let maxAttempts = 2;
       let attempts = 1;
-      while (maybeMore && ((new Date().getTime() - startTime) <= (1000 * 30))) {
+      while (maybeMore && new Date().getTime() - startTime <= 1000 * 30) {
         try {
-          let closeResult = closeNextGroup(getNotificationCenterGroups(), closedCount);
+          let closeResult = closeNextGroup(
+            getNotificationCenterGroups(),
+            closedCount,
+          );
           maybeMore = closeResult[0];
           if (maybeMore) {
             closedCount = closedCount + closeResult[1];
           }
         } catch (innerErr) {
           if (maybeMore && closedCount === 0 && attempts < maxAttempts) {
-            log(`Caught an error before anything closed, trying ${maxAttempts - attempts} more time(s).`)
+            log(
+              `Caught an error before anything closed, trying ${maxAttempts - attempts} more time(s).`,
+            );
             attempts++;
           } else {
             throw innerErr;
